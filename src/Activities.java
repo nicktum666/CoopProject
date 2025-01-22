@@ -1,5 +1,3 @@
-
-
 class Activities {
 
     //3 статических класса - Йога, Бокс и Бассейн
@@ -24,7 +22,7 @@ class Activities {
         public void reduceWeight(Person person) {
             //используем метод у персона и олучаем имя через геттер у персона
             person.reduceWeight(0.5);
-            System.out.println(person.getName() + " потерял 0.5 кг после йоги.");
+            System.out.println(person.getName() + " потерял 0.5 кг после йоги. Текущий вес: " + person.getWeight());
         }
     }
 
@@ -43,7 +41,7 @@ class Activities {
 
         public void reduceWeight(Person person) {
             person.reduceWeight(1.0);
-            System.out.println(person.getName() + " потерял 1.0 кг после бокса.");
+            System.out.println(person.getName() + " потерял 1.0 кг после бокса. Текущий вес: " + person.getWeight());
         }
     }
 
@@ -62,7 +60,7 @@ class Activities {
 
         public void reduceWeight(Person person) {
             person.reduceWeight(1.8);
-            System.out.println(person.getName() + " потерял 1.8 кг после плавания.");
+            System.out.println(person.getName() + " потерял 1.8 кг после плавания. Текущий вес: " + person.getWeight());
         }
     }
 }
