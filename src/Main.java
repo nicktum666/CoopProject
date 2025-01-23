@@ -5,9 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
         // Создаем объекты секций
-        Activities.YogaSection yogaSection = new Activities.YogaSection();
-        Activities.BoxSection boxSection = new Activities.BoxSection();
-        Activities.PoolSection poolSection = new Activities.PoolSection();
 
         // Создаем ArrayList
         ArrayList<Person> people = new ArrayList<>();
@@ -28,8 +25,8 @@ public class Main {
         sections.put("Бассейн", new ArrayList<>());
 
         // Распределяем людей по секциям и проводим тренировки
-        Activities2 activities = new Activities2();
-        
+        Activities activities = new Activities();
+
         for (Person person : people) {
             // Распределяем человека в соответствующий список
             switch (person.getId()) {
@@ -42,12 +39,12 @@ public class Main {
         }
 
         // Вывод
-        System.out.println("\nИтоговое распределение по секциям:");
-        for (String section : sections.keySet()) {
-            System.out.println("\n" + section + ":");
-            for (Person person : sections.get(section)) {
-                System.out.println(person.getName() + " - Вес после тренировки: " + person.getWeight() + " кг");
-            }
-        }
+        System.out.println("Итоговое распределение по секциям:");
+                for (String section : sections.keySet()) {
+                    System.out.println("\nВ секции " + section + ":");
+                    for (Person person : sections.get(section)) {
+                        System.out.println(person.getName());
+                    }
+                }
     }
 }
